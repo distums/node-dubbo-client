@@ -1,0 +1,8 @@
+{
+  "BOOLEAN": "boolean",
+  "INT": "int",
+  "SHORT": "short",
+  "LONG": "long",
+  "DOUBLE": "double",
+  "FLOAT": "float"
+}
