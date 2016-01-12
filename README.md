@@ -1,9 +1,50 @@
 # node-dubbo-client
-node dubbo client base https://github.com/p412726700/node-zookeeper-dubbo,require Node.js>=5.x.x
+node dubbo client base https://github.com/p412726700/node-zookeeper-dubbo
+require Node.js>=5.x.x
 
-### config
+###config DubboTcpClient
 ##### env
-envirmoment
+envirmoment,hessian version
+##### host
+tcp host
+#### port
+tcp port
+#### timeout
+tcp timeout
+##### path
+service path
+##### version
+dubbo version
+
+### Example
+```javascript
+'use strict';
+
+const DubboTcpClient = require('../index').DubboTcpClient;
+const types = require('../index').types;
+
+var opt = {
+  env: '0.0.0',
+  host: '127.0.0.1',
+  port: 8888,
+  path: 'com.customer.Service'
+};
+
+var method = "getUserByID";
+var arg1 = {$class: types.INT, $: 1};
+var args = [arg1];
+
+var service = new DubboTcpClient(opt);
+service.execute(method, args).then(data=> {
+  console.log('result:', data);
+}, err=> {
+  console.log(err);
+});
+```
+
+### config Service
+##### env
+envirmoment,hessian version
 ##### conn
 zookeeper conn url
 ##### path
@@ -13,7 +54,7 @@ dubbo version
 
 ### Example
 ```javascript
-var Service=require('node-zookeeper-dubbo');
+var Service=require('node-zookeeper-dubbo').Service;
 
 var opt={
   env:'test',
