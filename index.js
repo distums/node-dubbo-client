@@ -4,8 +4,10 @@
 'use strict';
 
 var types = require('./lib/parameters/types.json');
+const DubboTcpClient = require('./lib/dubboTcpClient');
 
 module.exports = {
   Service: require('./lib/service'),
-  types: types
+  types,
+  DubboTcpClient
 };

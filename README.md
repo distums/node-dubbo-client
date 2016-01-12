@@ -1,8 +1,5 @@
-# node-zookeeper-dubbo
-nodejs connect dubbo by default protocol in zookeeper
-
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][npm-url]
+# node-dubbo-client
+node dubbo client base https://github.com/p412726700/node-zookeeper-dubbo,require Node.js>=5.x.x
 
 ### config
 ##### env
